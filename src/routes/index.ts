@@ -1,7 +1,6 @@
 import { FastifyInstance } from "fastify";
+import { r_api } from "./api";
 
 export async function allRoutes(server: FastifyInstance) {
-    server.get('/whatsup', async (req, res) => {
-        return 'nothing';
-    });
+    server.register(r_api, { prefix: '/api' });
 }

@@ -148,7 +148,7 @@ model QueryResult {
   disease_name        String
   disease_category_id Int
   query_detail_id     Int
-  estimated_accuracy  Float
+  priority            Int
   fed_back            Boolean
   feedback_accuracy   Float
 
@@ -177,22 +177,23 @@ model UserImage {
 model ClassificationSymptom {
   id                              Int    @id @default(autoincrement())
   name                            String
+  vector_index                    Int
   classification_symptom_group_id Int
 
   classification_queries       ClassificationQuery[]
-  classification_symptom_group ClassficationSymptomGroup @relation(fields: [classification_symptom_group_id], references: [id])
+  classification_symptom_group ClassificationSymptomGroup @relation(fields: [classification_symptom_group_id], references: [id])
 
   @@map("classification_symptoms")
 }
 
-model ClassficationSymptomGroup {
+model ClassificationSymptomGroup {
   id        Int    @id @default(autoincrement())
   parent_id Int?
   name      String
   tier      Int
 
-  parent   ClassficationSymptomGroup?  @relation("children2parent", fields: [parent_id], references: [id])
-  children ClassficationSymptomGroup[] @relation("children2parent")
+  parent   ClassificationSymptomGroup?  @relation("children2parent", fields: [parent_id], references: [id])
+  children ClassificationSymptomGroup[] @relation("children2parent")
 
   classification_symptoms ClassificationSymptom[]
 

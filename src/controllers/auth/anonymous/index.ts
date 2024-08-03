@@ -7,7 +7,7 @@ import { getAccessTokenFromCookie } from "@/utils/accessTokenCookieIO";
 import { UserWithAccount } from "@/types/UserWithAccount";
 import { InvalidAccessTokenError } from "@/utils/accessTokenAuthority/errors";
 
-export async function c_api_auth_anonymous(
+export async function c_GET_api_auth_anonymous(
     req: FastifyRequest,
     res: FastifyReply,
 ): Promise<UserWithAccountResponse> {

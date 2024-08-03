@@ -10,6 +10,8 @@ export const BACKEND_URL: string = readNonEmptyStringEnv('BACKEND_URL');
 export const FRONTEND_SECRET: string = readNonEmptyStringEnv('FRONTEND_SECRET');
 export const FRONTEND_URLS: string[] = readStringListEnv('FRONTEND_URLS', { ignoreEmptySegments: true });
 
+export const CLASSIFICATION_MODEL_ENDPOINT: string = readNonEmptyStringEnv('CLASSIFICATION_MODEL_ENDPOINT');
+
 export const DATABASE_URL: string = readNonEmptyStringEnv('DATABASE_URL');
 export const SHADOW_DATABASE_URL: string = readNonEmptyStringEnv('SHADOW_DATABASE_URL');
 

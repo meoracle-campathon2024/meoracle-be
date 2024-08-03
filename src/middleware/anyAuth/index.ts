@@ -2,7 +2,7 @@ import { verifyAccessToken } from "@/utils/accessTokenAuthority";
 import { getAccessTokenFromCookie } from "@/utils/accessTokenCookieIO";
 import { FastifyReply, FastifyRequest } from "fastify";
 
-export async function anonymousAuth(
+export async function anyAuth(
     req: FastifyRequest,
     res: FastifyReply,
 ): Promise<void> {
