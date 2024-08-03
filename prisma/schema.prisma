@@ -138,6 +138,7 @@ model QueryDetail {
   image_query          ImageQuery?
 
   query_results QueryResult[]
+  appointments  Appointment[]
 
   @@map("query_details")
 }
@@ -237,6 +238,7 @@ model Department {
 
   hospital           Hospital          @relation(fields: [hospital_id], references: [id])
   disease_categories DiseaseCategory[]
+  appointments       Appointment[]
 
   @@map("departments")
 }
@@ -250,7 +252,9 @@ model Appointment {
   note            String   @db.Text
   query_detail_id Int
 
-  user User @relation(fields: [user_id], references: [id])
+  user         User        @relation(fields: [user_id], references: [id])
+  department   Department  @relation(fields: [department_id], references: [id])
+  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id])
 
   @@map("appointments")
 }
