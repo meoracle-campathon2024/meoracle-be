@@ -1,8 +1,9 @@
-import { saveClassificationQueryInfo, getClassifcationSymptomsFromIds, saveDetectedDiseases } from "./helpers/data";
+import { saveClassificationQueryInfo, getClassifcationSymptomsFromIds } from "./helpers/data";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { ClassificationQueryRequestPayload, ClassificationQueryResponsePayload, TClassificationQueryResponsePayload } from "./types";
 import { callClassificationModel } from "./helpers/model";
 import { Value } from "@sinclair/typebox/value";
+import { saveDetectedDiseases } from "@/utils/saveDetectedDiseases";
 
 export async function c_POST_classification_query(
     req: FastifyRequest<{ Body: ClassificationQueryRequestPayload }>,

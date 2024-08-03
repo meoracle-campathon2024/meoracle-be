@@ -10,16 +10,3 @@ export type ClassificationQueryRequestPayload = Static<typeof TClassificationQue
 export const TClassificationQueryResponsePayload = TQueryResultListResponse;
 
 export type ClassificationQueryResponsePayload = Static<typeof TClassificationQueryResponsePayload>;
-
-
-
-
-
-export const TDiseaseDetectedByClassificationModel = Type.Object({
-    name: Type.String(),
-    category_id: Type.Number(),
-});
-
-export const TListOfDiseasesDetectedByClassificationModel = Type.Array(TDiseaseDetectedByClassificationModel);
-
-export type ListOfDiseasesDetectedByClassificationModel = Static<typeof TListOfDiseasesDetectedByClassificationModel>;

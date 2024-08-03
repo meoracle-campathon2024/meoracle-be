@@ -1,16 +1,17 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { createAnonymousUser } from "./helpers";
-import { TUserWithAccountResponse, UserWithAccountResponse } from "@/types/UserWithAccountResponse";
+import { TUserWithAccountResponse } from "@/types/UserWithAccountResponse";
 import { Value } from "@sinclair/typebox/value";
 import { issueAccessToken, verifyAccessToken } from "@/utils/accessTokenAuthority";
 import { getAccessTokenFromCookie, setAccessTokenAsCookie } from "@/utils/accessTokenCookieIO";
 import { UserWithAccount } from "@/types/UserWithAccount";
 import { InvalidAccessTokenError } from "@/utils/accessTokenAuthority/errors";
+import { AuthResponse } from "./types";
 
 export async function c_GET_api_auth_anonymous(
     req: FastifyRequest,
     res: FastifyReply,
-): Promise<UserWithAccountResponse> {
+): Promise<AuthResponse> {
     const prisma = req.server.prisma;
 
     let accessToken = getAccessTokenFromCookie(req);
@@ -21,7 +22,7 @@ export async function c_GET_api_auth_anonymous(
     } catch (e) {
         if (!(e instanceof InvalidAccessTokenError)) throw e;
         user = await createAnonymousUser({ prisma });
-        accessToken = await issueAccessToken({ user });
+        accessToken = issueAccessToken({ user });
     }
 
     setAccessTokenAsCookie({

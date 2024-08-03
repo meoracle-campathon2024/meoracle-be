@@ -7,6 +7,7 @@ import { allRoutes } from "./routes";
 import { CSRF_TOKEN_HEADER_NAME } from "./config";
 import { prismaPlugin } from "./plugins/prismaPlugin";
 import { redisPlugin } from "./plugins/redisPlugin";
+import { firebaseStoragePlugin } from "./plugins/firebaseStoragePlugin";
 
 export async function createServer() {
     // https://fastify.dev/docs/latest/Reference/TypeScript/#typebox
@@ -37,6 +38,8 @@ export async function createServer() {
         server.register(prismaPlugin),
 
         server.register(redisPlugin),
+
+        server.register(firebaseStoragePlugin),
     ];
 
     await Promise.all(pluginInitializationPromises);

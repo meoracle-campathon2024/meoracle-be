@@ -1,11 +1,11 @@
 import { CLASSIFICATION_MODEL_ENDPOINT } from "@/env";
 import { ModelMalfunctionError, ModelUnavailableError } from "@/errors";
+import { ListOfDiseasesDetected, TListOfDiseasesDetected } from "@/utils/saveDetectedDiseases/types";
 import { Value } from "@sinclair/typebox/value";
-import { ListOfDiseasesDetectedByClassificationModel, TListOfDiseasesDetectedByClassificationModel } from "../types";
 
 export async function callClassificationModel(vectorIndexes: Array<{
     vector_index: number,
-}>): Promise<ListOfDiseasesDetectedByClassificationModel> {
+}>): Promise<ListOfDiseasesDetected> {
     const res = await fetch(`${CLASSIFICATION_MODEL_ENDPOINT}`, {
         method: 'POST',
         headers: {
@@ -26,9 +26,9 @@ export async function callClassificationModel(vectorIndexes: Array<{
     }
 
     const data = await res.json();
-    if (!Value.Check(TListOfDiseasesDetectedByClassificationModel, data)) {
+    if (!Value.Check(TListOfDiseasesDetected, data)) {
         throw new ModelMalfunctionError('classification', 'invalid response');
     }
 
-    return data as ListOfDiseasesDetectedByClassificationModel;
+    return data as ListOfDiseasesDetected;
 }

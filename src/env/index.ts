@@ -11,8 +11,14 @@ export const FRONTEND_SECRET: string = readNonEmptyStringEnv('FRONTEND_SECRET');
 export const FRONTEND_URLS: string[] = readStringListEnv('FRONTEND_URLS', { ignoreEmptySegments: true });
 
 export const CLASSIFICATION_MODEL_ENDPOINT: string = readNonEmptyStringEnv('CLASSIFICATION_MODEL_ENDPOINT');
+export const NLP_MODEL_ENDPOINT: string = readNonEmptyStringEnv('NLP_MODEL_ENDPOINT');
+export const IMAGE_MODEL_ENDPOINT: string = readNonEmptyStringEnv('IMAGE_MODEL_ENDPOINT');
 
 export const DATABASE_URL: string = readNonEmptyStringEnv('DATABASE_URL');
 export const SHADOW_DATABASE_URL: string = readNonEmptyStringEnv('SHADOW_DATABASE_URL');
+export const SKIN_CATEGORY_ID: number = readNumberEnv('SKIN_CATEGORY_ID', NumberEnvRequirement.MUST_BE_POSITIVE);
 
 export const REDIS_URL: string = readNonEmptyStringEnv('REDIS_URL');
+
+export const FIREBASE_CLOUD_STORAGE_BUCKET_NAME: string = readNonEmptyStringEnv('FIREBASE_CLOUD_STORAGE_BUCKET_NAME');
+export const FIREBASE_CLOUD_STORAGE_KEY_FILENAME: string = readNonEmptyStringEnv('FIREBASE_CLOUD_STORAGE_KEY_FILENAME');

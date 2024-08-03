@@ -1,8 +1,6 @@
 import { ClassificationQuery, PrismaClient, QueryDetail, QueryResult } from "@prisma/client";
 import { InvalidSymptomListError } from "../errors";
 import { CLASSIFICATION_MODEL_ID } from "@/config";
-import { ListOfDiseasesDetectedByClassificationModel } from "../types";
-import { QueryResultListResponse } from "@/types/QueryResultListResponse";
 
 export async function getClassifcationSymptomsFromIds({ prisma, selectedClassificationSymptomIdList } : {
     prisma: PrismaClient,
@@ -59,28 +57,4 @@ export async function saveClassificationQueryInfo({ prisma, userId, validatedCla
     });
 
     return [queryDetail, classificationQuery];
-}
-
-export async function saveDetectedDiseases({ prisma, diseasesDetected, queryDetailId } : {
-    prisma: PrismaClient,
-    diseasesDetected: ListOfDiseasesDetectedByClassificationModel,
-    queryDetailId: number,
-}): Promise<QueryResult[]> {
-    const created_at = new Date();
-
-    return await Promise.all(
-        diseasesDetected.map(({ name, category_id }, idx) => {
-            const data = {
-                created_at,
-                disease_name: name,
-                disease_category_id: category_id,
-                query_detail_id: queryDetailId,
-                priority: idx,
-                fed_back: false,
-                feedback_accuracy: 0.0,
-            };
-
-            return prisma.queryResult.create({ data });
-        }),
-    );
 }
