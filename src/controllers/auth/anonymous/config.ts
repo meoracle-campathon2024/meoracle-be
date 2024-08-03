@@ -1,4 +1,4 @@
-import { TUserWithAccountResponse } from "@/response_types/UserWithAccountResponse";
+import { TUserWithAccountResponse } from "@/types/UserWithAccountResponse";
 import { Type, type Static } from "@sinclair/typebox";
 
 export const TResponseBody = TUserWithAccountResponse;
