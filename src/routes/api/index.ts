@@ -8,5 +8,5 @@ export async function r_api(server: FastifyInstance) {
 
     server.register(r_api_classification, { prefix: '/classification' });
 
-    server.register(r_api_image_upload_token, { prefix: '/image_upload_token' });
+    server.register(r_api_image_upload_token, { prefix: '/image-upload-token' });
 }
