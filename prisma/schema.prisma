@@ -1,0 +1,268 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+// ADMINISTRATIVE DIVISIONS
+
+model Country {
+  id         Int    @id @default(autoincrement())
+  code       String @db.VarChar(7)
+  short_name String @db.VarChar(127)
+  full_name  String @db.VarChar(255)
+
+  division_types      DivisionType[]
+  accounts            Account[]
+  examination_results ExaminationResult[]
+
+  @@map("countries")
+}
+
+model DivisionType {
+  id         Int    @id @default(autoincrement())
+  country_id Int
+  name       String
+  level      Int
+
+  country   Country    @relation(fields: [country_id], references: [id])
+  divisions Division[]
+
+  @@map("division_types")
+}
+
+// Search for top division type of a country:
+// SELECT * FROM division_types WHERE country_id = ? AND level = 0;
+
+model Division {
+  id               Int    @id @default(autoincrement())
+  parent_id        Int?
+  division_type_id Int
+  name             String
+  lat              Float
+  lon              Float
+
+  division_type DivisionType @relation(fields: [division_type_id], references: [id])
+  parent        Division?    @relation("children2parent", fields: [parent_id], references: [id])
+  children      Division[]   @relation("children2parent")
+
+  hospitals Hospital[]
+
+  @@map("divisions")
+}
+
+// USERS AND QUERIES
+
+model User {
+  id         Int  @id @default(autoincrement())
+  account_id Int? @unique
+
+  account                Account?              @relation(fields: [account_id], references: [id])
+  classification_queries ClassificationQuery[]
+  nlp_queries            NlpQuery[]
+  image_queries          ImageQuery[]
+  appointments           Appointment[]
+
+  @@map("users")
+}
+
+model Account {
+  id                       Int      @id @default(autoincrement())
+  email                    String
+  password_hash            String
+  name                     String
+  date_of_birth            DateTime @db.Date
+  country_id               Int
+  national_identity_number String
+
+  user    User?
+  country Country @relation(fields: [country_id], references: [id])
+
+  @@map("accounts")
+}
+
+model ClassificationQuery {
+  id              Int @id @default(autoincrement())
+  user_id         Int
+  query_detail_id Int @unique
+
+  user                    User                    @relation(fields: [user_id], references: [id])
+  query_detail            QueryDetail             @relation(fields: [query_detail_id], references: [id])
+  classification_symptoms ClassificationSymptom[]
+
+  @@map("classification_queries")
+}
+
+model NlpQuery {
+  id              Int @id @default(autoincrement())
+  user_id         Int
+  query_detail_id Int @unique
+
+  query_content String
+
+  user         User        @relation(fields: [user_id], references: [id])
+  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id])
+
+  @@map("nlp_queries")
+}
+
+model ImageQuery {
+  id              Int @id @default(autoincrement())
+  user_id         Int
+  query_detail_id Int @unique
+
+  user         User        @relation(fields: [user_id], references: [id])
+  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id])
+  user_images  UserImage[]
+
+  @@map("image_queries")
+}
+
+model QueryDetail {
+  id         Int      @id @default(autoincrement())
+  created_at DateTime
+  type       Int
+
+  classification_query ClassificationQuery?
+  nlp_query            NlpQuery?
+  image_query          ImageQuery?
+
+  query_results QueryResult[]
+
+  @@map("query_details")
+}
+
+model QueryResult {
+  id                  Int      @id @default(autoincrement())
+  created_at          DateTime
+  disease_name        String
+  disease_category_id Int
+  query_detail_id     Int
+  estimated_accuracy  Float
+  fed_back            Boolean
+  feedback_accuracy   Float
+
+  // disease category is used to match between THE DISEASE and THE DEPARTMENTS of hospitals
+  // that could support patients having that disease.
+  disease_category DiseaseCategory @relation(fields: [disease_category_id], references: [id])
+  query_detail     QueryDetail     @relation(fields: [query_detail_id], references: [id])
+
+  @@map("query_results")
+}
+
+// IMAGE QUERIES :: IMAGES
+
+model UserImage {
+  id             Int    @id @default(autoincrement())
+  image_query_id Int
+  file_path      String
+
+  image_query ImageQuery @relation(fields: [image_query_id], references: [id])
+
+  @@map("user_images")
+}
+
+// CLASSIFICATION QUERIES :: SYMPTOMS
+
+model ClassificationSymptom {
+  id                              Int    @id @default(autoincrement())
+  name                            String
+  classification_symptom_group_id Int
+
+  classification_queries       ClassificationQuery[]
+  classification_symptom_group ClassficationSymptomGroup @relation(fields: [classification_symptom_group_id], references: [id])
+
+  @@map("classification_symptoms")
+}
+
+model ClassficationSymptomGroup {
+  id        Int    @id @default(autoincrement())
+  parent_id Int?
+  name      String
+  tier      Int
+
+  parent   ClassficationSymptomGroup?  @relation("children2parent", fields: [parent_id], references: [id])
+  children ClassficationSymptomGroup[] @relation("children2parent")
+
+  classification_symptoms ClassificationSymptom[]
+
+  @@map("classification_symptom_groups")
+}
+
+// DISEASE CATEGORIES
+
+model DiseaseCategory {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  query_results       QueryResult[]
+  departments         Department[]
+  examination_results ExaminationResult[]
+
+  @@map("disease_categories")
+}
+
+// HOSPITALS AND THEIR DEPARTMENTS
+
+model Hospital {
+  id               Int    @id @default(autoincrement())
+  name             String
+  division_id      Int
+  specific_address String
+  api_spec         String @db.Text
+
+  division    Division     @relation(fields: [division_id], references: [id])
+  departments Department[]
+
+  @@map("hospitals")
+}
+
+model Department {
+  id                  Int    @id @default(autoincrement())
+  hospital_id         Int
+  name                String
+  specific_address    String
+  id_for_hospital_api String
+
+  hospital           Hospital          @relation(fields: [hospital_id], references: [id])
+  disease_categories DiseaseCategory[]
+
+  @@map("departments")
+}
+
+model Appointment {
+  id              Int      @id @default(autoincrement())
+  user_id         Int
+  created_at      DateTime
+  scheduled_at    DateTime
+  department_id   Int
+  note            String   @db.Text
+  query_detail_id Int
+
+  user User @relation(fields: [user_id], references: [id])
+
+  @@map("appointments")
+}
+
+model ExaminationResult {
+  id           Int    @id @default(autoincrement())
+  disease_name String
+
+  country_id               Int
+  national_identity_number String
+
+  disease_categories DiseaseCategory[]
+  country            Country           @relation(fields: [country_id], references: [id])
+
+  @@map("examination_results")
+}
