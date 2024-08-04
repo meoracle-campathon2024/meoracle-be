@@ -35,7 +35,7 @@ model DivisionType {
   name       String
   level      Int
 
-  country   Country    @relation(fields: [country_id], references: [id])
+  country   Country    @relation(fields: [country_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   divisions Division[]
 
   @@map("division_types")
@@ -52,8 +52,8 @@ model Division {
   lat              Float
   lon              Float
 
-  division_type DivisionType @relation(fields: [division_type_id], references: [id])
-  parent        Division?    @relation("children2parent", fields: [parent_id], references: [id])
+  division_type DivisionType @relation(fields: [division_type_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  parent        Division?    @relation("children2parent", fields: [parent_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   children      Division[]   @relation("children2parent")
 
   hospitals Hospital[]
@@ -67,7 +67,7 @@ model User {
   id         Int  @id @default(autoincrement())
   account_id Int? @unique
 
-  account                Account?              @relation(fields: [account_id], references: [id])
+  account                Account?              @relation(fields: [account_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   classification_queries ClassificationQuery[]
   nlp_queries            NlpQuery[]
   image_queries          ImageQuery[]
@@ -86,7 +86,7 @@ model Account {
   national_identity_number String
 
   user    User?
-  country Country @relation(fields: [country_id], references: [id])
+  country Country @relation(fields: [country_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
   @@map("accounts")
 }
@@ -96,8 +96,8 @@ model ClassificationQuery {
   user_id         Int
   query_detail_id Int @unique
 
-  user                    User                    @relation(fields: [user_id], references: [id])
-  query_detail            QueryDetail             @relation(fields: [query_detail_id], references: [id])
+  user                    User                    @relation(fields: [user_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  query_detail            QueryDetail             @relation(fields: [query_detail_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   classification_symptoms ClassificationSymptom[]
 
   @@map("classification_queries")
@@ -110,8 +110,8 @@ model NlpQuery {
 
   query_content String
 
-  user         User        @relation(fields: [user_id], references: [id])
-  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id])
+  user         User        @relation(fields: [user_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
   @@map("nlp_queries")
 }
@@ -121,8 +121,8 @@ model ImageQuery {
   user_id         Int
   query_detail_id Int @unique
 
-  user         User        @relation(fields: [user_id], references: [id])
-  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id])
+  user         User        @relation(fields: [user_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   user_images  UserImage[]
 
   @@map("image_queries")
@@ -155,8 +155,8 @@ model QueryResult {
 
   // disease category is used to match between THE DISEASE and THE DEPARTMENTS of hospitals
   // that could support patients having that disease.
-  disease_category DiseaseCategory @relation(fields: [disease_category_id], references: [id])
-  query_detail     QueryDetail     @relation(fields: [query_detail_id], references: [id])
+  disease_category DiseaseCategory @relation(fields: [disease_category_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  query_detail     QueryDetail     @relation(fields: [query_detail_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
   @@map("query_results")
 }
@@ -168,7 +168,7 @@ model UserImage {
   image_query_id Int
   file_path      String
 
-  image_query ImageQuery @relation(fields: [image_query_id], references: [id])
+  image_query ImageQuery @relation(fields: [image_query_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
   @@map("user_images")
 }
@@ -182,7 +182,7 @@ model ClassificationSymptom {
   classification_symptom_group_id Int
 
   classification_queries       ClassificationQuery[]
-  classification_symptom_group ClassificationSymptomGroup @relation(fields: [classification_symptom_group_id], references: [id])
+  classification_symptom_group ClassificationSymptomGroup @relation(fields: [classification_symptom_group_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
   @@map("classification_symptoms")
 }
@@ -193,7 +193,7 @@ model ClassificationSymptomGroup {
   name      String
   tier      Int
 
-  parent   ClassificationSymptomGroup?  @relation("children2parent", fields: [parent_id], references: [id])
+  parent   ClassificationSymptomGroup?  @relation("children2parent", fields: [parent_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   children ClassificationSymptomGroup[] @relation("children2parent")
 
   classification_symptoms ClassificationSymptom[]
@@ -223,7 +223,7 @@ model Hospital {
   specific_address String
   api_spec         String @db.Text
 
-  division    Division     @relation(fields: [division_id], references: [id])
+  division    Division     @relation(fields: [division_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   departments Department[]
 
   @@map("hospitals")
@@ -236,7 +236,7 @@ model Department {
   specific_address    String
   id_for_hospital_api String
 
-  hospital           Hospital          @relation(fields: [hospital_id], references: [id])
+  hospital           Hospital          @relation(fields: [hospital_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   disease_categories DiseaseCategory[]
   appointments       Appointment[]
 
@@ -252,9 +252,9 @@ model Appointment {
   note            String   @db.Text
   query_detail_id Int
 
-  user         User        @relation(fields: [user_id], references: [id])
-  department   Department  @relation(fields: [department_id], references: [id])
-  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id])
+  user         User        @relation(fields: [user_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  department   Department  @relation(fields: [department_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  query_detail QueryDetail @relation(fields: [query_detail_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
   @@map("appointments")
 }
@@ -267,7 +267,7 @@ model ExaminationResult {
   national_identity_number String
 
   disease_categories DiseaseCategory[]
-  country            Country           @relation(fields: [country_id], references: [id])
+  country            Country           @relation(fields: [country_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
   @@map("examination_results")
 }

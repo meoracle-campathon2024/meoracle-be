@@ -4,6 +4,7 @@ import { r_api_classification } from "./classification";
 import { r_api_image_upload_token } from "./image_upload_token";
 import { r_api_image_model } from "./image_model";
 import { r_api_nlp } from "./nlp";
+import { r_api_queries } from "./queries";
 
 export async function r_api(server: FastifyInstance) {
     server.register(r_api_auth, { prefix: '/auth' });
@@ -15,4 +16,6 @@ export async function r_api(server: FastifyInstance) {
     server.register(r_api_image_model, { prefix: '/image-model' });
 
     server.register(r_api_nlp, { prefix: '/nlp' });
+    
+    server.register(r_api_queries, { prefix: '/queries' });
 }
