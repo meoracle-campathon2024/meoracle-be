@@ -5,7 +5,7 @@ export async function saveImageModelQueryInfo({ prisma, userId, userImageFilePat
     prisma: PrismaClient,
     userId: number,
     userImageFilePaths: string[],
-}): Promise<[QueryDetail, ImageQuery]> {
+}): Promise<[QueryDetail]> {
     const queryDetail = await prisma.queryDetail.create({
         data: {
             created_at: new Date(),
@@ -18,22 +18,5 @@ export async function saveImageModelQueryInfo({ prisma, userId, userImageFilePat
         },
     });
 
-    const imageQuery = await prisma.imageQuery.create({
-        data: {
-            user_id: userId,
-            query_detail_id: queryDetail.id,
-        },
-    });
-
-    // TODO: Should we await for this?
-    await prisma.userImage.createMany({
-        data: userImageFilePaths.map(filePath => {
-            return {
-                image_query_id: imageQuery.id,
-                file_path: filePath,
-            };
-        }),
-    });
-
-    return [queryDetail, imageQuery];
+    return [queryDetail];
 }
