@@ -22,7 +22,11 @@ export async function getAllQueries({ prisma, userId } : {
             include: {
                 query_detail: {
                     include: {
-                        query_results: true,
+                        query_results: {
+                            orderBy: {
+                                priority: 'asc',
+                            },
+                        },
                     },
                 },
                 classification_symptoms: true,
@@ -34,7 +38,11 @@ export async function getAllQueries({ prisma, userId } : {
             include: {
                 query_detail: {
                     include: {
-                        query_results: true,
+                        query_results: {
+                            orderBy: {
+                                priority: 'asc',
+                            },
+                        },
                     },
                 },
             },
@@ -45,7 +53,11 @@ export async function getAllQueries({ prisma, userId } : {
             include: {
                 query_detail: {
                     include: {
-                        query_results: true,
+                        query_results: {
+                            orderBy: {
+                                priority: 'asc',
+                            },
+                        },
                     },
                 },
                 user_images: true,
