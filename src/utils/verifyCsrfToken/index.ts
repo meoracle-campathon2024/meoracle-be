@@ -5,9 +5,10 @@ export async function verifyCsrfToken({ redis, csrfToken }: Readonly<{
     redis: RedisClientType<any, any, any>,
     csrfToken: string,
 }>) {
-    const payload = verifyCsrfTokenAndReturnPayload(csrfToken);
+    // const payload = verifyCsrfTokenAndReturnPayload(csrfToken);
 
-    const memoKey = checkPayloadValidityAndGetMemoKey(payload);
+    // const memoKey = checkPayloadValidityAndGetMemoKey(payload);
 
-    await checkMemoKeyUniquenessAndSaveMemoKeyIfNecessary({ redis, memoKey });
+    // await checkMemoKeyUniquenessAndSaveMemoKeyIfNecessary({ redis, memoKey });
+    
 }

@@ -108,7 +108,7 @@ model NlpQuery {
   user_id         Int
   query_detail_id Int @unique
 
-  query_content String
+  query_content String @db.LongText
 
   user         User        @relation(fields: [user_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
   query_detail QueryDetail @relation(fields: [query_detail_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
