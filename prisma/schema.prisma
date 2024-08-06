@@ -166,7 +166,7 @@ model QueryResult {
 model UserImage {
   id             Int    @id @default(autoincrement())
   image_query_id Int
-  file_path      String
+  file_path      String @db.LongText
 
   image_query ImageQuery @relation(fields: [image_query_id], references: [id], onUpdate: Cascade, onDelete: Cascade)
 
