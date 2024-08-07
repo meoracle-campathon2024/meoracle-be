@@ -7,6 +7,7 @@ export async function callNlpModel({ queryContent } : {
     queryContent: string,
 }): Promise<ListOfDiseasesDetected> {
     if (null === NLP_MODEL_ENDPOINT) {
+        await new Promise(resolve => setTimeout(() => resolve(null), 2000));
         return [
             {
                 name: 'panic disorder',

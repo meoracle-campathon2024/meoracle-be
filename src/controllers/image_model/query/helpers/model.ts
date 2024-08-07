@@ -11,6 +11,7 @@ export async function callImageQueryModel({ imageLinks } : {
     imageLinks: string[],
 }): Promise<ListOfDiseasesDetected> {
     if (null === IMAGE_MODEL_ENDPOINT) {
+        await new Promise(resolve => setTimeout(() => resolve(null), 2000));
         return [
             {
                 name: 'các tổn thương tương tự sừng hóa lành tính',

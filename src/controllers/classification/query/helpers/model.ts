@@ -7,6 +7,7 @@ export async function callClassificationModel(vectorIndexes: Array<{
     vector_index: number,
 }>): Promise<ListOfDiseasesDetected> {
     if (null === CLASSIFICATION_MODEL_ENDPOINT) {
+        await new Promise(resolve => setTimeout(() => resolve(null), 2000));
         return [
             {
                 name: 'heart failure',
