@@ -4,7 +4,7 @@ import { anyAuth } from "@/middleware/anyAuth";
 import { FastifyInstance } from "fastify";
 
 export async function r_api_countries(server: FastifyInstance) {
-    // server.addHook('onRequest', anyAuth);
+    server.addHook('onRequest', anyAuth);
 
     server.get('/', {
         schema: {

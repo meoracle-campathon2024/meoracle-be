@@ -1,13 +1,18 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { GetQueriesResponsePayload } from "./types";
-import { getAllQueries } from "./helpers";
+import { GetQueriesRequestQuerystring, GetQueriesResponsePayload } from "./types";
+import { getAllQueries, getQueryById } from "./helpers";
 
 export async function c_GET_queries(
-    req: FastifyRequest,
+    req: FastifyRequest<{Querystring: GetQueriesRequestQuerystring}>,
     res: FastifyReply,
 ): Promise<GetQueriesResponsePayload> {
     const { prisma } = req.server;
     const userId = req.user.id;
+    const { query_detail_id } = req.query;
 
-    return await getAllQueries({ prisma, userId });
+    if (undefined === query_detail_id) {
+        return await getAllQueries({ prisma, userId });
+    } else {
+        return [await getQueryById({ prisma, userId, queryDetailId: query_detail_id })];
+    }
 }

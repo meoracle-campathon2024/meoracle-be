@@ -8,6 +8,6 @@ export async function c_GET_divisions(
 ): Promise<DivisionListResponse> {
     return await getAllDivisionsOfCountry({
         prisma: req.server.prisma,
-        countryId: req.query.countryId,
+        countryId: req.query.country_id,
     });
 }

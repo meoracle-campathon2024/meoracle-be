@@ -51,6 +51,10 @@ export async function getAllDivisionsOfCountry({ prisma, countryId } : {
 
     const results: DivisionResponseWithChildren[] = [];
     for (const [divisionId, division] of divisionsById) {
+        division.children.sort((a, b) => {
+            return a.name.toLocaleLowerCase().localeCompare(b.name.toLocaleLowerCase());
+        });
+
         const parentDivisionId = division.parent_id;
         if (null !== parentDivisionId) {
             const parentDivision = divisionsById.get(parentDivisionId);
@@ -66,6 +70,10 @@ export async function getAllDivisionsOfCountry({ prisma, countryId } : {
             }
         }
     }
+
+    results.sort((a, b) => {
+        return a.name.toLocaleLowerCase().localeCompare(b.name.toLocaleLowerCase());
+    });
 
     return results;
 }

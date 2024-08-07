@@ -7,6 +7,8 @@ import { r_api_nlp } from "./nlp";
 import { r_api_queries } from "./queries";
 import { r_api_divisions } from "./divisions";
 import { r_api_countries } from "./countries";
+import { r_api_appointments } from "./appointments";
+import { r_api_departments } from "./departments";
 
 export async function r_api(server: FastifyInstance) {
     server.register(r_api_auth, { prefix: '/auth' });
@@ -24,4 +26,8 @@ export async function r_api(server: FastifyInstance) {
     server.register(r_api_divisions, { prefix: '/divisions' });
 
     server.register(r_api_countries, { prefix: '/countries' });
+
+    server.register(r_api_appointments, { prefix: '/appointments' });
+
+    server.register(r_api_departments, { prefix: '/departments' });
 }

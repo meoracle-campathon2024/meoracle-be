@@ -1,6 +1,6 @@
 import { CLASSIFICATION_MODEL_ID, IMAGE_MODEL_ID, NLP_MODEL_ID } from "@/config";
 import { PrismaClient, QueryDetail, QueryResult } from "@prisma/client";
-import { InvalidQueryDetailError } from "./errors";
+import { InvalidQueryDetailError, QueryDetailNotFoundError, QueryNotOwnedByUserError } from "./errors";
 import { QueryResponse } from "@/types/QueryResponse";
 import { Value } from "@sinclair/typebox/value";
 import { TQueryResultListResponse } from "@/types/QueryResultListResponse";
@@ -70,6 +70,7 @@ export async function getAllQueries({ prisma, userId } : {
         const qd = q.query_detail;
         queryResponses.push({
             id: qd.id,
+            user_id: q.user_id,
             created_at: +qd.created_at,
             model_name: 'classification',
             results: Value.Cast(TQueryResultListResponse, qd.query_results),
@@ -82,6 +83,7 @@ export async function getAllQueries({ prisma, userId } : {
         const qd = q.query_detail;
         queryResponses.push({
             id: qd.id,
+            user_id: q.user_id,
             created_at: +qd.created_at,
             model_name: 'nlp',
             results: Value.Cast(TQueryResultListResponse, qd.query_results),
@@ -94,6 +96,7 @@ export async function getAllQueries({ prisma, userId } : {
         const qd = q.query_detail;
         queryResponses.push({
             id: qd.id,
+            user_id: q.user_id,
             created_at: +qd.created_at,
             model_name: 'image',
             results: Value.Cast(TQueryResultListResponse, qd.query_results),
@@ -105,6 +108,32 @@ export async function getAllQueries({ prisma, userId } : {
     queryResponses.sort((a, b) => a.created_at - b.created_at);
 
     return queryResponses;
+}
+
+export async function getQueryById({ prisma, userId, queryDetailId } : {
+    prisma: PrismaClient,
+    userId: number,
+    queryDetailId: number,
+}): Promise<QueryResponse> {
+    const queryDetailWithResults = await prisma.queryDetail.findUnique({
+        where: {
+            id: queryDetailId,
+        },
+        include: {
+            query_results: true,
+        },
+    });
+
+    if (null === queryDetailWithResults) {
+        throw new QueryDetailNotFoundError(queryDetailId);
+    }
+
+    const queryResponse = await getQueryDetailWithFullQueryData({ prisma, queryDetailWithResults });
+    if (userId !== queryResponse.user_id) {
+        throw new QueryNotOwnedByUserError(queryDetailId);
+    }
+
+    return queryResponse;
 }
 
 export async function getQueryDetailWithFullQueryData({ prisma, queryDetailWithResults } : {
@@ -133,6 +162,7 @@ export async function getQueryDetailWithFullQueryData({ prisma, queryDetailWithR
 
                 return {
                     ...generalInfo,
+                    user_id: classificationQuery?.user_id || 0,
                     model_name: 'classification',
                     selected_symptoms,
                 };
@@ -155,6 +185,7 @@ export async function getQueryDetailWithFullQueryData({ prisma, queryDetailWithR
 
                 return {
                     ...generalInfo,
+                    user_id: imageQuery?.user_id || 0,
                     model_name: 'image',
                     uploaded_images,
                 };
@@ -168,11 +199,13 @@ export async function getQueryDetailWithFullQueryData({ prisma, queryDetailWithR
                     },
                     select: {
                         query_content: true,
+                        user_id: true,
                     },
                 });
 
                 return {
                     ...generalInfo,
+                    user_id: nlpQuery?.user_id || 0,
                     model_name: 'nlp',
                     query_content: nlpQuery?.query_content || "",
                 };

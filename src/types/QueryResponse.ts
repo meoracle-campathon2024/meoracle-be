@@ -4,6 +4,7 @@ import { TQueryResultListResponse } from "./QueryResultListResponse";
 export const TQueryResponse = Type.Intersect([
     Type.Object({
         id: Type.Number(),
+        user_id: Type.Number(),
         created_at: Type.Number(),
         results: TQueryResultListResponse,
     }),
