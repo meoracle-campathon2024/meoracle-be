@@ -3,7 +3,6 @@ import { NlpQueryRequestPayload, NlpQueryResponsePayload, TNlpQueryResponsePaylo
 import { callNlpModel } from "./helpers/model";
 import { saveNlpQueryInfo } from "./helpers/data";
 import { saveDetectedDiseases } from "@/utils/saveDetectedDiseases";
-import { Value } from "@sinclair/typebox/value";
 
 export async function c_POST_nlp_query(
     req: FastifyRequest<{ Body: NlpQueryRequestPayload }>,
@@ -26,5 +25,18 @@ export async function c_POST_nlp_query(
         queryDetailId: queryDetail.id,
     });
 
-    return Value.Cast(TNlpQueryResponsePayload, queryResults);
+    return {
+        query_detail: {
+            id: queryDetail.id,
+            created_at: +queryDetail.created_at,
+        },
+        detected_diseases: queryResults.map(qr => {
+            return {
+                id: qr.id,
+                disease_name: qr.disease_name,
+                created_at: +qr.created_at,
+                priority: qr.priority,
+            };
+        }),
+    };
 }

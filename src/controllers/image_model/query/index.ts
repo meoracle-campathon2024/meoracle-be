@@ -3,7 +3,6 @@ import { ImageModelQueryRequestPayload, ImageModelQueryResponsePayload, TImageMo
 import { saveImageModelQueryInfo } from "./helpers/data";
 import { callImageQueryModel } from "./helpers/model";
 import { saveDetectedDiseases } from "@/utils/saveDetectedDiseases";
-import { Value } from "@sinclair/typebox/value";
 
 export async function c_POST_image_model_query(
     req: FastifyRequest<{ Body: ImageModelQueryRequestPayload }>,
@@ -28,5 +27,18 @@ export async function c_POST_image_model_query(
         queryDetailId: queryDetail.id,
     });
 
-    return Value.Cast(TImageModelQueryResponsePayload, queryResults);
+    return {
+        query_detail: {
+            id: queryDetail.id,
+            created_at: +queryDetail.created_at,
+        },
+        detected_diseases: queryResults.map(qr => {
+            return {
+                id: qr.id,
+                disease_name: qr.disease_name,
+                created_at: +qr.created_at,
+                priority: qr.priority,
+            };
+        }),
+    };
 }

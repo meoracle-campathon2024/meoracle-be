@@ -1,4 +1,4 @@
-import { TQueryResultListResponse } from "@/types/QueryResultListResponse";
+import { TPredictionCallResponse } from "@/types/PredictionCallResponse";
 import { type Static, Type } from "@sinclair/typebox";
 
 export const TNlpQueryRequestPayload = Type.Object({
@@ -7,6 +7,6 @@ export const TNlpQueryRequestPayload = Type.Object({
 
 export type NlpQueryRequestPayload = Static<typeof TNlpQueryRequestPayload>;
 
-export const TNlpQueryResponsePayload = TQueryResultListResponse;
+export const TNlpQueryResponsePayload = TPredictionCallResponse;
 
 export type NlpQueryResponsePayload = Static<typeof TNlpQueryResponsePayload>;

@@ -2,7 +2,6 @@ import { saveClassificationQueryInfo, getClassifcationSymptomsFromIds } from "./
 import { FastifyReply, FastifyRequest } from "fastify";
 import { ClassificationQueryRequestPayload, ClassificationQueryResponsePayload, TClassificationQueryResponsePayload } from "./types";
 import { callClassificationModel } from "./helpers/model";
-import { Value } from "@sinclair/typebox/value";
 import { saveDetectedDiseases } from "@/utils/saveDetectedDiseases";
 
 export async function c_POST_classification_query(
@@ -28,5 +27,18 @@ export async function c_POST_classification_query(
         queryDetailId: queryDetail.id,
     });
 
-    return Value.Cast(TClassificationQueryResponsePayload, queryResults);
+    return {
+        query_detail: {
+            id: queryDetail.id,
+            created_at: +queryDetail.created_at,
+        },
+        detected_diseases: queryResults.map(qr => {
+            return {
+                id: qr.id,
+                disease_name: qr.disease_name,
+                created_at: +qr.created_at,
+                priority: qr.priority,
+            };
+        }),
+    }
 }
