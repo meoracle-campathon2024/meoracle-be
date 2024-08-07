@@ -6,6 +6,25 @@ import { Value } from "@sinclair/typebox/value";
 export async function callClassificationModel(vectorIndexes: Array<{
     vector_index: number,
 }>): Promise<ListOfDiseasesDetected> {
+    if (null === CLASSIFICATION_MODEL_ENDPOINT) {
+        return [
+            {
+                name: 'heart failure',
+                category_id: 8,
+            },
+
+            ...(Math.random() > 0.3 ? [{
+                name: 'hypertension',
+                category_id: 8,
+            }] : []),
+
+            ...(Math.random() > 0.7 ? [{
+                name: 'cataracts',
+                category_id: 7,
+            }] : []),
+        ];
+    }
+
     const res = await fetch(`${CLASSIFICATION_MODEL_ENDPOINT}`, {
         method: 'POST',
         headers: {

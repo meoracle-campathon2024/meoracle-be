@@ -6,6 +6,20 @@ import { Value } from "@sinclair/typebox/value";
 export async function callNlpModel({ queryContent } : {
     queryContent: string,
 }): Promise<ListOfDiseasesDetected> {
+    if (null === NLP_MODEL_ENDPOINT) {
+        return [
+            {
+                name: 'panic disorder',
+                category_id: 1,
+            },
+
+            ...(Math.random() > 0.4 ? [{
+                name: 'insomnia',
+                category_id: 1,
+            }] : []),
+        ];
+    }
+
     const res = await fetch(`${NLP_MODEL_ENDPOINT}`, {
         method: 'POST',
         headers: {

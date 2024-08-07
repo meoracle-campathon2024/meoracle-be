@@ -51,6 +51,10 @@ export function readNonEmptyStringEnv(keyName: string): string {
     return process.env[keyName] || envKeyIsInvalidOrMissing(keyName);
 }
 
+export function readOptionalStringEnv(keyName: string): string|null {
+    return process.env[keyName] || null;
+}
+
 export function readStringListEnv(keyName: string, { ignoreEmptySegments } : {
     ignoreEmptySegments: boolean,
 }): string[] {

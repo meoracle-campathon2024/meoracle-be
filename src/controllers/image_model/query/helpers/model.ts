@@ -10,6 +10,20 @@ type ListOfDiseasesDetectedByImageModel = Static<typeof TListOfDiseasesDetectedB
 export async function callImageQueryModel({ imageLinks } : {
     imageLinks: string[],
 }): Promise<ListOfDiseasesDetected> {
+    if (null === IMAGE_MODEL_ENDPOINT) {
+        return [
+            {
+                name: 'các tổn thương tương tự sừng hóa lành tính',
+                category_id: SKIN_CATEGORY_ID,
+            },
+
+            ...(Math.random() > 0.5 ? [{
+                name: 'nốt ruồi hắc tố',
+                category_id: SKIN_CATEGORY_ID,
+            }] : []),
+        ];
+    }
+
     const res = await fetch(`${IMAGE_MODEL_ENDPOINT}`, {
         method: 'POST',
         headers: {
