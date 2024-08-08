@@ -105,7 +105,7 @@ export async function getAllQueries({ prisma, userId } : {
         });
     }
 
-    queryResponses.sort((a, b) => a.created_at - b.created_at);
+    queryResponses.sort((a, b) => b.created_at - a.created_at);
 
     return queryResponses;
 }
