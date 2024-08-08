@@ -9,6 +9,9 @@ export async function getAllAppointments({ prisma, userId } : {
     userId: number,
 }): Promise<AppointmentResponse[]> {
     const appointments = await prisma.appointment.findMany({
+        where: {
+            user_id: userId,
+        },
         select: {
             id: true,
         },
