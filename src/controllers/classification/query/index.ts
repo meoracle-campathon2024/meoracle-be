@@ -12,7 +12,7 @@ export async function c_POST_classification_query(
     const selectedClassificationSymptomIdList = req.body.selected_classification_symptom_ids;
 
     const symptoms = await getClassifcationSymptomsFromIds({ prisma, selectedClassificationSymptomIdList });
-
+    console.log('symptoms', symptoms);
     const [diseasesDetected, [queryDetail]] = await Promise.all([
         callClassificationModel(symptoms),
         saveClassificationQueryInfo({

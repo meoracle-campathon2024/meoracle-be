@@ -1,0 +1,2321 @@
+[
+  {
+    "panic disorder": "1"
+  },
+  {
+    "vocal cord polyp": "7"
+  },
+  {
+    "turner syndrome": "9"
+  },
+  {
+    "injury to internal organ": "9"
+  },
+  {
+    "cryptorchidism": "9"
+  },
+  {
+    "poisoning due to ethylene glycol": "9"
+  },
+  {
+    "atrophic vaginitis": "6"
+  },
+  {
+    "fracture of the hand": "5"
+  },
+  {
+    "cellulitis or abscess of mouth": "7"
+  },
+  {
+    "eye alignment disorder": "7"
+  },
+  {
+    "headache after lumbar puncture": "1"
+  },
+  {
+    "pyloric stenosis": "3"
+  },
+  {
+    "salivary gland disorder": "7"
+  },
+  {
+    "osteochondrosis": "5"
+  },
+  {
+    "injury to the knee": "5"
+  },
+  {
+    "metabolic disorder": "9"
+  },
+  {
+    "vaginitis": "4"
+  },
+  {
+    "sick sinus syndrome": "8"
+  },
+  {
+    "tinnitus of unknown cause": "1"
+  },
+  {
+    "glaucoma": "7"
+  },
+  {
+    "eating disorder": "1"
+  },
+  {
+    "transient ischemic attack": "8"
+  },
+  {
+    "pyelonephritis": "6"
+  },
+  {
+    "rotator cuff injury": "5"
+  },
+  {
+    "chronic pain disorder": "1"
+  },
+  {
+    "problem during pregnancy": "9"
+  },
+  {
+    "liver cancer": "3"
+  },
+  {
+    "atelectasis": "2"
+  },
+  {
+    "injury to the hand": "5"
+  },
+  {
+    "choledocholithiasis": "3"
+  },
+  {
+    "injury to the hip": "5"
+  },
+  {
+    "cirrhosis": "3"
+  },
+  {
+    "thoracic aortic aneurysm": "8"
+  },
+  {
+    "subdural hemorrhage": "1"
+  },
+  {
+    "diabetic retinopathy": "7"
+  },
+  {
+    "fibromyalgia": "1"
+  },
+  {
+    "ischemia of the bowel": "3"
+  },
+  {
+    "fetal alcohol syndrome": "1"
+  },
+  {
+    "peritonitis": "3"
+  },
+  {
+    "injury to the abdomen": "3"
+  },
+  {
+    "acute pancreatitis": "3"
+  },
+  {
+    "thrombophlebitis": "8"
+  },
+  {
+    "asthma": "2"
+  },
+  {
+    "foreign body in the vagina": "6"
+  },
+  {
+    "restless leg syndrome": "1"
+  },
+  {
+    "emphysema": "2"
+  },
+  {
+    "cysticercosis": "1"
+  },
+  {
+    "induced abortion": "9"
+  },
+  {
+    "teething syndrome": "7"
+  },
+  {
+    "infectious gastroenteritis": "3"
+  },
+  {
+    "acute sinusitis": "7"
+  },
+  {
+    "substance-related mental disorder": "1"
+  },
+  {
+    "postpartum depression": "1"
+  },
+  {
+    "coronary atherosclerosis": "8"
+  },
+  {
+    "spondylitis": "5"
+  },
+  {
+    "pituitary adenoma": "1"
+  },
+  {
+    "uterine fibroids": "9"
+  },
+  {
+    "idiopathic nonmenstrual bleeding": "9"
+  },
+  {
+    "chalazion": "7"
+  },
+  {
+    "ovarian torsion": "9"
+  },
+  {
+    "retinopathy due to high blood pressure": "7"
+  },
+  {
+    "vaginal yeast infection": "4"
+  },
+  {
+    "mastoiditis": "7"
+  },
+  {
+    "lung contusion": "2"
+  },
+  {
+    "hypertrophic obstructive cardiomyopathy (hocm)": "8"
+  },
+  {
+    "ingrown toe nail": "5"
+  },
+  {
+    "pulmonary eosinophilia": "2"
+  },
+  {
+    "corneal disorder": "7"
+  },
+  {
+    "foreign body in the gastrointestinal tract": "3"
+  },
+  {
+    "endophthalmitis": "7"
+  },
+  {
+    "intestinal malabsorption": "3"
+  },
+  {
+    "viral warts": "6"
+  },
+  {
+    "hyperhidrosis": "1"
+  },
+  {
+    "stroke": "1"
+  },
+  {
+    "pilonidal cyst": "9"
+  },
+  {
+    "crushing injury": "5"
+  },
+  {
+    "normal pressure hydrocephalus": "1"
+  },
+  {
+    "alopecia": "6"
+  },
+  {
+    "hashimoto thyroiditis": "1"
+  },
+  {
+    "flat feet": "5"
+  },
+  {
+    "nonalcoholic liver disease (nash)": "3"
+  },
+  {
+    "hemarthrosis": "5"
+  },
+  {
+    "pelvic organ prolapse": "6"
+  },
+  {
+    "fracture of the arm": "5"
+  },
+  {
+    "coagulation (bleeding) disorder": "9"
+  },
+  {
+    "intracranial hemorrhage": "1"
+  },
+  {
+    "hyperkalemia": "8"
+  },
+  {
+    "cornea infection": "7"
+  },
+  {
+    "abscess of the lung": "2"
+  },
+  {
+    "dengue fever": "8"
+  },
+  {
+    "chronic sinusitis": "7"
+  },
+  {
+    "cholesteatoma": "7"
+  },
+  {
+    "volvulus": "3"
+  },
+  {
+    "injury to the finger": "5"
+  },
+  {
+    "poisoning due to analgesics": "9"
+  },
+  {
+    "atrial fibrillation": "8"
+  },
+  {
+    "pinworm infection": "3"
+  },
+  {
+    "urethral valves": "4"
+  },
+  {
+    "open wound of the neck": "9"
+  },
+  {
+    "achalasia": "3"
+  },
+  {
+    "conductive hearing loss": "7"
+  },
+  {
+    "abdominal hernia": "3"
+  },
+  {
+    "cerebral palsy": "1"
+  },
+  {
+    "marijuana abuse": "9"
+  },
+  {
+    "cryptococcosis": "2"
+  },
+  {
+    "obesity": "9"
+  },
+  {
+    "indigestion": "3"
+  },
+  {
+    "bursitis": "5"
+  },
+  {
+    "esophageal cancer": "3"
+  },
+  {
+    "pulmonary congestion": "2"
+  },
+  {
+    "juvenile rheumatoid arthritis": "5"
+  },
+  {
+    "actinic keratosis": "6"
+  },
+  {
+    "acute otitis media": "7"
+  },
+  {
+    "astigmatism": "7"
+  },
+  {
+    "tuberous sclerosis": "1"
+  },
+  {
+    "empyema": "2"
+  },
+  {
+    "presbyacusis": "7"
+  },
+  {
+    "neonatal jaundice": "9"
+  },
+  {
+    "chronic obstructive pulmonary disease (copd)": "2"
+  },
+  {
+    "dislocation of the elbow": "5"
+  },
+  {
+    "spondylosis": "5"
+  },
+  {
+    "herpangina": "7"
+  },
+  {
+    "injury to the shoulder": "5"
+  },
+  {
+    "poisoning due to antidepressants": "1"
+  },
+  {
+    "infection of open wound": "1"
+  },
+  {
+    "deep vein thrombosis (dvt)": "8"
+  },
+  {
+    "protein deficiency": "9"
+  },
+  {
+    "myoclonus": "1"
+  },
+  {
+    "bone spur of the calcaneous": "5"
+  },
+  {
+    "von willebrand disease": "8"
+  },
+  {
+    "open wound of the back": "5"
+  },
+  {
+    "heart block": "8"
+  },
+  {
+    "colonic polyp": "3"
+  },
+  {
+    "magnesium deficiency": "1"
+  },
+  {
+    "female infertility of unknown cause": "9"
+  },
+  {
+    "pericarditis": "8"
+  },
+  {
+    "attention deficit hyperactivity disorder (adhd)": "1"
+  },
+  {
+    "pulmonic valve disease": "8"
+  },
+  {
+    "tietze syndrome": "5"
+  },
+  {
+    "cranial nerve palsy": "1"
+  },
+  {
+    "injury to the arm": "5"
+  },
+  {
+    "conversion disorder": "1"
+  },
+  {
+    "complex regional pain syndrome": "1"
+  },
+  {
+    "otosclerosis": "7"
+  },
+  {
+    "injury to the trunk": "5"
+  },
+  {
+    "hypothyroidism": "1"
+  },
+  {
+    "primary insomnia": "1"
+  },
+  {
+    "lice": "6"
+  },
+  {
+    "vitamin b12 deficiency": "12"
+  },
+  {
+    "diabetes": "9"
+  },
+  {
+    "vulvodynia": "6"
+  },
+  {
+    "endometriosis": "9"
+  },
+  {
+    "vasculitis": "8"
+  },
+  {
+    "concussion": "1"
+  },
+  {
+    "oral leukoplakia": "6"
+  },
+  {
+    "chronic kidney disease": "9"
+  },
+  {
+    "bladder disorder": "6"
+  },
+  {
+    "chorioretinitis": "7"
+  },
+  {
+    "priapism": "9"
+  },
+  {
+    "myositis": "5"
+  },
+  {
+    "mononucleosis": "1"
+  },
+  {
+    "neuralgia": "1"
+  },
+  {
+    "polycystic kidney disease": "6"
+  },
+  {
+    "bipolar disorder": "1"
+  },
+  {
+    "amyloidosis": "1"
+  },
+  {
+    "chronic inflammatory demyelinating polyneuropathy (cidp)": "1"
+  },
+  {
+    "gastroesophageal reflux disease (gerd)": "3"
+  },
+  {
+    "vitreous hemorrhage": "7"
+  },
+  {
+    "poisoning due to antimicrobial drugs": "1"
+  },
+  {
+    "open wound of the mouth": "7"
+  },
+  {
+    "scleroderma": "1"
+  },
+  {
+    "myasthenia gravis": "1"
+  },
+  {
+    "hypoglycemia": "1"
+  },
+  {
+    "idiopathic absence of menstruation": "9"
+  },
+  {
+    "dislocation of the ankle": "5"
+  },
+  {
+    "carbon monoxide poisoning": "8"
+  },
+  {
+    "panic attack": "1"
+  },
+  {
+    "plantar fasciitis": "5"
+  },
+  {
+    "hyperopia": "7"
+  },
+  {
+    "poisoning due to sedatives": "1"
+  },
+  {
+    "pemphigus": "6"
+  },
+  {
+    "peyronie disease": "5"
+  },
+  {
+    "hiatal hernia": "3"
+  },
+  {
+    "extrapyramidal effect of drugs": "1"
+  },
+  {
+    "meniere disease": "7"
+  },
+  {
+    "anal fissure": "3"
+  },
+  {
+    "allergy": "1"
+  },
+  {
+    "chronic otitis media": "7"
+  },
+  {
+    "fracture of the finger": "5"
+  },
+  {
+    "hirschsprung disease": "3"
+  },
+  {
+    "polymyalgia rheumatica": "1"
+  },
+  {
+    "lymphedema": "1"
+  },
+  {
+    "bladder cancer": "6"
+  },
+  {
+    "acute bronchospasm": "2"
+  },
+  {
+    "acute glaucoma": "7"
+  },
+  {
+    "open wound of the chest": "2"
+  },
+  {
+    "dislocation of the patella": "5"
+  },
+  {
+    "sciatica": "5"
+  },
+  {
+    "hypercalcemia": "1"
+  },
+  {
+    "stress incontinence": "6"
+  },
+  {
+    "varicose veins": "8"
+  },
+  {
+    "benign kidney cyst": "3"
+  },
+  {
+    "hydrocele of the testicle": "4"
+  },
+  {
+    "degenerative disc disease": "5"
+  },
+  {
+    "hirsutism": "6"
+  },
+  {
+    "dislocation of the foot": "5"
+  },
+  {
+    "hydronephrosis": "4"
+  },
+  {
+    "diverticulosis": "3"
+  },
+  {
+    "pain after an operation": "1"
+  },
+  {
+    "huntington disease": "1"
+  },
+  {
+    "lymphoma": "1"
+  },
+  {
+    "dermatitis due to sun exposure": "6"
+  },
+  {
+    "anemia due to chronic kidney disease": "9"
+  },
+  {
+    "scleritis": "7"
+  },
+  {
+    "pterygium": "7"
+  },
+  {
+    "fungal infection of the skin": "6"
+  },
+  {
+    "insulin overdose": "8"
+  },
+  {
+    "syndrome of inappropriate secretion of adh (siadh)": "9"
+  },
+  {
+    "foreign body in the ear": "7"
+  },
+  {
+    "premenstrual tension syndrome": "9"
+  },
+  {
+    "orbital cellulitis": "7"
+  },
+  {
+    "injury to the leg": "5"
+  },
+  {
+    "hepatic encephalopathy": "9"
+  },
+  {
+    "bone cancer": "5"
+  },
+  {
+    "syringomyelia": "1"
+  },
+  {
+    "pulmonary fibrosis": "2"
+  },
+  {
+    "mitral valve disease": "8"
+  },
+  {
+    "parkinson disease": "1"
+  },
+  {
+    "gout": "9"
+  },
+  {
+    "otitis media": "7"
+  },
+  {
+    "drug abuse (opioids)": "9"
+  },
+  {
+    "myelodysplastic syndrome": "1"
+  },
+  {
+    "fracture of the shoulder": "5"
+  },
+  {
+    "acute kidney injury": "9"
+  },
+  {
+    "threatened pregnancy": "9"
+  },
+  {
+    "intracranial abscess": "1"
+  },
+  {
+    "gum disease": "3"
+  },
+  {
+    "open wound from surgical incision": "5"
+  },
+  {
+    "gastrointestinal hemorrhage": "3"
+  },
+  {
+    "seborrheic dermatitis": "6"
+  },
+  {
+    "drug abuse (methamphetamine)": "1"
+  },
+  {
+    "torticollis": "5"
+  },
+  {
+    "poisoning due to antihypertensives": "8"
+  },
+  {
+    "tension headache": "1"
+  },
+  {
+    "alcohol intoxication": "1"
+  },
+  {
+    "scurvy": "3"
+  },
+  {
+    "narcolepsy": "1"
+  },
+  {
+    "food allergy": "1"
+  },
+  {
+    "labyrinthitis": "7"
+  },
+  {
+    "anxiety": "1"
+  },
+  {
+    "impulse control disorder": "1"
+  },
+  {
+    "stenosis of the tear duct": "7"
+  },
+  {
+    "abscess of nose": "7"
+  },
+  {
+    "omphalitis": "3"
+  },
+  {
+    "leukemia": "1"
+  },
+  {
+    "bell palsy": "1"
+  },
+  {
+    "conjunctivitis due to allergy": "7"
+  },
+  {
+    "drug reaction": "9"
+  },
+  {
+    "adrenal cancer": "9"
+  },
+  {
+    "myopia": "7"
+  },
+  {
+    "osteoarthritis": "5"
+  },
+  {
+    "thyroid disease": "1"
+  },
+  {
+    "pharyngitis": "7"
+  },
+  {
+    "chronic rheumatic fever": "1"
+  },
+  {
+    "hypocalcemia": "1"
+  },
+  {
+    "macular degeneration": "7"
+  },
+  {
+    "pneumonia": "2"
+  },
+  {
+    "optic neuritis": "7"
+  },
+  {
+    "cold sore": "7"
+  },
+  {
+    "premature ventricular contractions (pvcs)": "8"
+  },
+  {
+    "testicular cancer": "4"
+  },
+  {
+    "hydrocephalus": "1"
+  },
+  {
+    "breast cancer": "9"
+  },
+  {
+    "anemia due to malignancy": "9"
+  },
+  {
+    "esophageal varices": "3"
+  },
+  {
+    "endometrial cancer": "9"
+  },
+  {
+    "cystic fibrosis": "3"
+  },
+  {
+    "intertrigo (skin condition)": "6"
+  },
+  {
+    "parathyroid adenoma": "9"
+  },
+  {
+    "glucocorticoid deficiency": "9"
+  },
+  {
+    "temporomandibular joint disorder": "5"
+  },
+  {
+    "wilson disease": "1"
+  },
+  {
+    "vesicoureteral reflux": "4"
+  },
+  {
+    "vitamin a deficiency": "9"
+  },
+  {
+    "gonorrhea": "6"
+  },
+  {
+    "fracture of the rib": "5"
+  },
+  {
+    "ependymoma": "1"
+  },
+  {
+    "hepatitis due to a toxin": "3"
+  },
+  {
+    "vaginal cyst": "6"
+  },
+  {
+    "open wound of the shoulder": "5"
+  },
+  {
+    "ectopic pregnancy": "9"
+  },
+  {
+    "chronic knee pain": "5"
+  },
+  {
+    "pinguecula": "7"
+  },
+  {
+    "hypergammaglobulinemia": "1"
+  },
+  {
+    "alcohol abuse": "1"
+  },
+  {
+    "carpal tunnel syndrome": "5"
+  },
+  {
+    "pituitary disorder": "1"
+  },
+  {
+    "kidney stone": "6"
+  },
+  {
+    "autism": "1"
+  },
+  {
+    "cat scratch disease": "1"
+  },
+  {
+    "chronic glaucoma": "7"
+  },
+  {
+    "retinal detachment": "7"
+  },
+  {
+    "aplastic anemia": "1"
+  },
+  {
+    "overflow incontinence": "3"
+  },
+  {
+    "hemolytic anemia": "1"
+  },
+  {
+    "lateral epicondylitis (tennis elbow)": "5"
+  },
+  {
+    "open wound of the eye": "7"
+  },
+  {
+    "syphilis": "9"
+  },
+  {
+    "diabetic kidney disease": "9"
+  },
+  {
+    "nose disorder": "7"
+  },
+  {
+    "drug withdrawal": "1"
+  },
+  {
+    "dental caries": "9"
+  },
+  {
+    "hypercholesterolemia": "8"
+  },
+  {
+    "fracture of the patella": "5"
+  },
+  {
+    "kidney failure": "9"
+  },
+  {
+    "fracture of the neck": "5"
+  },
+  {
+    "muscle spasm": "5"
+  },
+  {
+    "hemophilia": "9"
+  },
+  {
+    "hyperosmotic hyperketotic state": "8"
+  },
+  {
+    "peritonsillar abscess": "7"
+  },
+  {
+    "gastroparesis": "3"
+  },
+  {
+    "itching of unknown cause": "6"
+  },
+  {
+    "polycythemia vera": "8"
+  },
+  {
+    "thrombocytopenia": "8"
+  },
+  {
+    "head and neck cancer": "7"
+  },
+  {
+    "pseudohypoparathyroidism": "1"
+  },
+  {
+    "goiter": "9"
+  },
+  {
+    "urge incontinence": "9"
+  },
+  {
+    "edward syndrome": "18"
+  },
+  {
+    "open wound of the arm": "5"
+  },
+  {
+    "muscular dystrophy": "5"
+  },
+  {
+    "mittelschmerz": "1"
+  },
+  {
+    "corneal abrasion": "7"
+  },
+  {
+    "anemia of chronic disease": "9"
+  },
+  {
+    "dysthymic disorder": "1"
+  },
+  {
+    "scarlet fever": "1"
+  },
+  {
+    "hypertensive heart disease": "8"
+  },
+  {
+    "drug abuse (barbiturates)": "1"
+  },
+  {
+    "polycystic ovarian syndrome (pcos)": "9"
+  },
+  {
+    "encephalitis": "1"
+  },
+  {
+    "cyst of the eyelid": "7"
+  },
+  {
+    "balanitis": "6"
+  },
+  {
+    "foreign body in the throat": "7"
+  },
+  {
+    "drug abuse (cocaine)": "9"
+  },
+  {
+    "alcohol withdrawal": "1"
+  },
+  {
+    "premature atrial contractions (pacs)": "8"
+  },
+  {
+    "hemiplegia": "1"
+  },
+  {
+    "hammer toe": "5"
+  },
+  {
+    "open wound of the cheek": "6"
+  },
+  {
+    "joint effusion": "5"
+  },
+  {
+    "open wound of the knee": "5"
+  },
+  {
+    "meningioma": "1"
+  },
+  {
+    "brain cancer": "1"
+  },
+  {
+    "placental abruption": "9"
+  },
+  {
+    "seasonal allergies (hay fever)": "7"
+  },
+  {
+    "lung cancer": "2"
+  },
+  {
+    "primary kidney disease": "4"
+  },
+  {
+    "uterine cancer": "9"
+  },
+  {
+    "dry eye of unknown cause": "7"
+  },
+  {
+    "fibrocystic breast disease": "9"
+  },
+  {
+    "fungal infection of the hair": "6"
+  },
+  {
+    "tooth abscess": "3"
+  },
+  {
+    "envenomation from spider or animal bite": "9"
+  },
+  {
+    "vacterl syndrome": "1"
+  },
+  {
+    "vertebrobasilar insufficiency": "1"
+  },
+  {
+    "rectal disorder": "3"
+  },
+  {
+    "atonic bladder": "1"
+  },
+  {
+    "benign paroxysmal positional vertical (bppv)": "7"
+  },
+  {
+    "blepharospasm": "7"
+  },
+  {
+    "sarcoidosis": "1"
+  },
+  {
+    "metastatic cancer": "9"
+  },
+  {
+    "trigger finger (finger disorder)": "5"
+  },
+  {
+    "stye": "7"
+  },
+  {
+    "hemochromatosis": "8"
+  },
+  {
+    "osteochondroma": "5"
+  },
+  {
+    "cushing syndrome": "9"
+  },
+  {
+    "typhoid fever": "9"
+  },
+  {
+    "vitreous degeneration": "7"
+  },
+  {
+    "atrophic skin condition": "6"
+  },
+  {
+    "aspergillosis": "2"
+  },
+  {
+    "uterine atony": "9"
+  },
+  {
+    "trichinosis": "3"
+  },
+  {
+    "whooping cough": "2"
+  },
+  {
+    "open wound of the lip": "7"
+  },
+  {
+    "subacute thyroiditis": "1"
+  },
+  {
+    "oral mucosal lesion": "7"
+  },
+  {
+    "open wound due to trauma": "1"
+  },
+  {
+    "intracerebral hemorrhage": "1"
+  },
+  {
+    "alzheimer disease": "1"
+  },
+  {
+    "vaginismus": "9"
+  },
+  {
+    "systemic lupus erythematosis (sle)": "9"
+  },
+  {
+    "premature ovarian failure": "9"
+  },
+  {
+    "thoracic outlet syndrome": "5"
+  },
+  {
+    "ganglion cyst": "5"
+  },
+  {
+    "dislocation of the knee": "5"
+  },
+  {
+    "crohn disease": "3"
+  },
+  {
+    "postoperative infection": "9"
+  },
+  {
+    "folate deficiency": "1"
+  },
+  {
+    "fluid overload": "8"
+  },
+  {
+    "atrial flutter": "8"
+  },
+  {
+    "skin disorder": "6"
+  },
+  {
+    "floaters": "7"
+  },
+  {
+    "tooth disorder": "7"
+  },
+  {
+    "heart attack": "8"
+  },
+  {
+    "open wound of the abdomen": "3"
+  },
+  {
+    "fracture of the leg": "5"
+  },
+  {
+    "oral thrush (yeast infection)": "3"
+  },
+  {
+    "pityriasis rosea": "6"
+  },
+  {
+    "allergy to animals": "1"
+  },
+  {
+    "orthostatic hypotension": "8"
+  },
+  {
+    "obstructive sleep apnea (osa)": "2"
+  },
+  {
+    "hypokalemia": "1"
+  },
+  {
+    "psoriasis": "6"
+  },
+  {
+    "dislocation of the shoulder": "5"
+  },
+  {
+    "intussusception": "3"
+  },
+  {
+    "cervicitis": "6"
+  },
+  {
+    "abscess of the pharynx": "7"
+  },
+  {
+    "primary thrombocythemia": "8"
+  },
+  {
+    "arthritis of the hip": "5"
+  },
+  {
+    "decubitus ulcer": "6"
+  },
+  {
+    "hypernatremia": "1"
+  },
+  {
+    "sensorineural hearing loss": "7"
+  },
+  {
+    "chronic ulcer": "3"
+  },
+  {
+    "osteoporosis": "5"
+  },
+  {
+    "ileus": "3"
+  },
+  {
+    "sickle cell crisis": "1"
+  },
+  {
+    "urethritis": "4"
+  },
+  {
+    "prostatitis": "9"
+  },
+  {
+    "otitis externa (swimmer's ear)": "7"
+  },
+  {
+    "poisoning due to anticonvulsants": "1"
+  },
+  {
+    "testicular torsion": "6"
+  },
+  {
+    "tricuspid valve disease": "8"
+  },
+  {
+    "urethral stricture": "4"
+  },
+  {
+    "vitamin d deficiency": "9"
+  },
+  {
+    "hydatidiform mole": "9"
+  },
+  {
+    "pain disorder affecting the neck": "5"
+  },
+  {
+    "tuberculosis": "2"
+  },
+  {
+    "pelvic fistula": "6"
+  },
+  {
+    "acute bronchiolitis": "2"
+  },
+  {
+    "presbyopia": "7"
+  },
+  {
+    "dementia": "1"
+  },
+  {
+    "insect bite": "6"
+  },
+  {
+    "paroxysmal ventricular tachycardia": "8"
+  },
+  {
+    "congenital heart defect": "8"
+  },
+  {
+    "connective tissue disorder": "1"
+  },
+  {
+    "foreign body in the eye": "7"
+  },
+  {
+    "poisoning due to gas": "2"
+  },
+  {
+    "pyogenic skin infection": "6"
+  },
+  {
+    "endometrial hyperplasia": "9"
+  },
+  {
+    "acanthosis nigricans": "6"
+  },
+  {
+    "central atherosclerosis": "8"
+  },
+  {
+    "viral exanthem": "6"
+  },
+  {
+    "noninfectious gastroenteritis": "3"
+  },
+  {
+    "benign prostatic hyperplasia (bph)": "4"
+  },
+  {
+    "menopause": "1"
+  },
+  {
+    "primary immunodeficiency": "1"
+  },
+  {
+    "ovarian cancer": "9"
+  },
+  {
+    "cataract": "7"
+  },
+  {
+    "dislocation of the hip": "5"
+  },
+  {
+    "spinal stenosis": "1"
+  },
+  {
+    "intestinal obstruction": "3"
+  },
+  {
+    "heart contusion": "8"
+  },
+  {
+    "congenital malformation syndrome": "9"
+  },
+  {
+    "sporotrichosis": "6"
+  },
+  {
+    "lymphangitis": "1"
+  },
+  {
+    "wernicke korsakoff syndrome": "1"
+  },
+  {
+    "intestinal disease": "3"
+  },
+  {
+    "acute bronchitis": "2"
+  },
+  {
+    "persistent vomiting of unknown cause": "3"
+  },
+  {
+    "open wound of the foot": "5"
+  },
+  {
+    "myocarditis": "8"
+  },
+  {
+    "preeclampsia": "8"
+  },
+  {
+    "ischemic heart disease": "8"
+  },
+  {
+    "neurofibromatosis": "1"
+  },
+  {
+    "chickenpox": "1"
+  },
+  {
+    "pancreatic cancer": "3"
+  },
+  {
+    "neuropathy due to drugs": "1"
+  },
+  {
+    "croup": "2"
+  },
+  {
+    "idiopathic excessive menstruation": "9"
+  },
+  {
+    "amblyopia": "7"
+  },
+  {
+    "meckel diverticulum": "3"
+  },
+  {
+    "dislocation of the wrist": "5"
+  },
+  {
+    "ear drum damage": "7"
+  },
+  {
+    "erectile dysfunction": "9"
+  },
+  {
+    "temporary or benign blood in urine": "9"
+  },
+  {
+    "kidney disease due to longstanding hypertension": "9"
+  },
+  {
+    "chondromalacia of the patella": "5"
+  },
+  {
+    "onychomycosis": "6"
+  },
+  {
+    "urethral disorder": "6"
+  },
+  {
+    "lyme disease": "1"
+  },
+  {
+    "iron deficiency anemia": "9"
+  },
+  {
+    "acute respiratory distress syndrome (ards)": "2"
+  },
+  {
+    "toxic multinodular goiter": "8"
+  },
+  {
+    "open wound of the finger": "5"
+  },
+  {
+    "autonomic nervous system disorder": "1"
+  },
+  {
+    "psychosexual disorder": "1"
+  },
+  {
+    "anemia": "9"
+  },
+  {
+    "tendinitis": "5"
+  },
+  {
+    "common cold": "2"
+  },
+  {
+    "amyotrophic lateral sclerosis (als)": "1"
+  },
+  {
+    "central retinal artery or vein occlusion": "7"
+  },
+  {
+    "paroxysmal supraventricular tachycardia": "8"
+  },
+  {
+    "venous insufficiency": "8"
+  },
+  {
+    "trichomonas infection": "9"
+  },
+  {
+    "acne": "6"
+  },
+  {
+    "depression": "1"
+  },
+  {
+    "drug abuse": "8"
+  },
+  {
+    "urinary tract obstruction": "4"
+  },
+  {
+    "diabetes insipidus": "1"
+  },
+  {
+    "iridocyclitis": "7"
+  },
+  {
+    "varicocele of the testicles": "4"
+  },
+  {
+    "irritable bowel syndrome": "3"
+  },
+  {
+    "fracture of the foot": "5"
+  },
+  {
+    "ovarian cyst": "9"
+  },
+  {
+    "chlamydia": "4"
+  },
+  {
+    "parasitic disease": "9"
+  },
+  {
+    "fracture of the jaw": "5"
+  },
+  {
+    "lipoma": "5"
+  },
+  {
+    "female genitalia infection": "6"
+  },
+  {
+    "pulmonary hypertension": "2"
+  },
+  {
+    "thyroid nodule": "1"
+  },
+  {
+    "broken tooth": "7"
+  },
+  {
+    "dumping syndrome": "3"
+  },
+  {
+    "lymphadenitis": "1"
+  },
+  {
+    "injury to the face": "7"
+  },
+  {
+    "aortic valve disease": "8"
+  },
+  {
+    "rheumatoid arthritis": "5"
+  },
+  {
+    "spermatocele": "6"
+  },
+  {
+    "impetigo": "6"
+  },
+  {
+    "anal fistula": "3"
+  },
+  {
+    "hypothermia": "1"
+  },
+  {
+    "oppositional disorder": "1"
+  },
+  {
+    "migraine": "1"
+  },
+  {
+    "diabetic peripheral neuropathy": "1"
+  },
+  {
+    "testicular disorder": "4"
+  },
+  {
+    "gestational diabetes": "9"
+  },
+  {
+    "hidradenitis suppurativa": "6"
+  },
+  {
+    "valley fever": "9"
+  },
+  {
+    "conjunctivitis due to bacteria": "7"
+  },
+  {
+    "lewy body dementia": "1"
+  },
+  {
+    "multiple myeloma": "1"
+  },
+  {
+    "head injury": "1"
+  },
+  {
+    "ascending cholangitis": "3"
+  },
+  {
+    "idiopathic irregular menstrual cycle": "9"
+  },
+  {
+    "interstitial lung disease": "2"
+  },
+  {
+    "mononeuritis": "1"
+  },
+  {
+    "malaria": "9"
+  },
+  {
+    "somatization disorder": "1"
+  },
+  {
+    "hypovolemia": "8"
+  },
+  {
+    "schizophrenia": "1"
+  },
+  {
+    "knee ligament or meniscus tear": "5"
+  },
+  {
+    "endocarditis": "8"
+  },
+  {
+    "sepsis": "9"
+  },
+  {
+    "heat stroke": "8"
+  },
+  {
+    "cholecystitis": "3"
+  },
+  {
+    "cardiac arrest": "8"
+  },
+  {
+    "cardiomyopathy": "8"
+  },
+  {
+    "social phobia": "1"
+  },
+  {
+    "meningitis": "1"
+  },
+  {
+    "spherocytosis": "1"
+  },
+  {
+    "hormone disorder": "9"
+  },
+  {
+    "raynaud disease": "8"
+  },
+  {
+    "reactive arthritis": "1"
+  },
+  {
+    "scabies": "6"
+  },
+  {
+    "ear wax impaction": "7"
+  },
+  {
+    "hypertension of pregnancy": "8"
+  },
+  {
+    "peripheral arterial embolism": "8"
+  },
+  {
+    "rosacea": "6"
+  },
+  {
+    "fracture of the skull": "5"
+  },
+  {
+    "uveitis": "7"
+  },
+  {
+    "fracture of the facial bones": "5"
+  },
+  {
+    "tracheitis": "2"
+  },
+  {
+    "jaw disorder": "1"
+  },
+  {
+    "perirectal infection": "3"
+  },
+  {
+    "breast cyst": "9"
+  },
+  {
+    "post-traumatic stress disorder (ptsd)": "1"
+  },
+  {
+    "kidney cancer": "9"
+  },
+  {
+    "vulvar cancer": "6"
+  },
+  {
+    "blepharitis": "7"
+  },
+  {
+    "celiac disease": "3"
+  },
+  {
+    "cystitis": "6"
+  },
+  {
+    "sickle cell anemia": "1"
+  },
+  {
+    "subconjunctival hemorrhage": "7"
+  },
+  {
+    "hemorrhoids": "3"
+  },
+  {
+    "contact dermatitis": "6"
+  },
+  {
+    "sinus bradycardia": "8"
+  },
+  {
+    "high blood pressure": "8"
+  },
+  {
+    "pelvic inflammatory disease": "6"
+  },
+  {
+    "liver disease": "3"
+  },
+  {
+    "chronic constipation": "3"
+  },
+  {
+    "thyroid cancer": "1"
+  },
+  {
+    "flu": "2"
+  },
+  {
+    "friedrich ataxia": "1"
+  },
+  {
+    "tic (movement) disorder": "1"
+  },
+  {
+    "skin polyp": "6"
+  },
+  {
+    "brachial neuritis": "1"
+  },
+  {
+    "cervical cancer": "9"
+  },
+  {
+    "adrenal adenoma": "9"
+  },
+  {
+    "esophagitis": "3"
+  },
+  {
+    "gas gangrene": "3"
+  },
+  {
+    "yeast infection": "4"
+  },
+  {
+    "spina bifida": "5"
+  },
+  {
+    "drug poisoning due to medication": "9"
+  },
+  {
+    "alcoholic liver disease": "3"
+  },
+  {
+    "malignant hypertension": "8"
+  },
+  {
+    "diverticulitis": "3"
+  },
+  {
+    "moyamoya disease": "1"
+  },
+  {
+    "heat exhaustion": "1"
+  },
+  {
+    "psychotic disorder": "1"
+  },
+  {
+    "frostbite": "5"
+  },
+  {
+    "atrophy of the corpus cavernosum": "9"
+  },
+  {
+    "smoking or tobacco addiction": "9"
+  },
+  {
+    "sprain or strain": "5"
+  },
+  {
+    "essential tremor": "1"
+  },
+  {
+    "open wound of the ear": "7"
+  },
+  {
+    "foreign body in the nose": "7"
+  },
+  {
+    "idiopathic painful menstruation": "1"
+  },
+  {
+    "down syndrome": "1"
+  },
+  {
+    "idiopathic infrequent menstruation": "1"
+  },
+  {
+    "pneumothorax": "2"
+  },
+  {
+    "de quervain disease": "5"
+  },
+  {
+    "fracture of the vertebra": "5"
+  },
+  {
+    "human immunodeficiency virus infection (hiv)": "9"
+  },
+  {
+    "mumps": "7"
+  },
+  {
+    "subarachnoid hemorrhage": "1"
+  },
+  {
+    "acute fatty liver of pregnancy (aflp)": "9"
+  },
+  {
+    "ectropion": "7"
+  },
+  {
+    "scar": "6"
+  },
+  {
+    "lactose intolerance": "3"
+  },
+  {
+    "eustachian tube dysfunction (ear disorder)": "7"
+  },
+  {
+    "appendicitis": "3"
+  },
+  {
+    "graves disease": "1"
+  },
+  {
+    "dissociative disorder": "1"
+  },
+  {
+    "open wound of the face": "6"
+  },
+  {
+    "dislocation of the vertebra": "5"
+  },
+  {
+    "phimosis": "6"
+  },
+  {
+    "hyperemesis gravidarum": "3"
+  },
+  {
+    "pregnancy": "9"
+  },
+  {
+    "thalassemia": "9"
+  },
+  {
+    "placenta previa": "9"
+  },
+  {
+    "epidural hemorrhage": "1"
+  },
+  {
+    "septic arthritis": "5"
+  },
+  {
+    "athlete's foot": "6"
+  },
+  {
+    "pleural effusion": "2"
+  },
+  {
+    "aphakia": "7"
+  },
+  {
+    "vulvar disorder": "6"
+  },
+  {
+    "sialoadenitis": "7"
+  },
+  {
+    "gynecomastia": "9"
+  },
+  {
+    "urinary tract infection": "4"
+  },
+  {
+    "histoplasmosis": "2"
+  },
+  {
+    "erythema multiforme": "6"
+  },
+  {
+    "scoliosis": "5"
+  },
+  {
+    "bunion": "5"
+  },
+  {
+    "arrhythmia": "8"
+  },
+  {
+    "trigeminal neuralgia": "1"
+  },
+  {
+    "ankylosing spondylitis": "5"
+  },
+  {
+    "peripheral nerve disorder": "1"
+  },
+  {
+    "sebaceous cyst": "6"
+  },
+  {
+    "poisoning due to antipsychotics": "1"
+  },
+  {
+    "neurosis": "1"
+  },
+  {
+    "prostate cancer": "4"
+  },
+  {
+    "cerebral edema": "1"
+  },
+  {
+    "dislocation of the finger": "5"
+  },
+  {
+    "birth trauma": "1"
+  },
+  {
+    "chronic pancreatitis": "3"
+  },
+  {
+    "hematoma": "1"
+  },
+  {
+    "carcinoid syndrome": "9"
+  },
+  {
+    "open wound of the head": "1"
+  },
+  {
+    "seborrheic keratosis": "6"
+  },
+  {
+    "burn": "6"
+  },
+  {
+    "spontaneous abortion": "9"
+  },
+  {
+    "genital herpes": "4"
+  },
+  {
+    "adjustment reaction": "1"
+  },
+  {
+    "gallstone": "3"
+  },
+  {
+    "multiple sclerosis": "1"
+  },
+  {
+    "zenker diverticulum": "3"
+  },
+  {
+    "fracture of the pelvis": "5"
+  },
+  {
+    "pneumoconiosis": "2"
+  },
+  {
+    "hyperlipidemia": "8"
+  },
+  {
+    "ulcerative colitis": "3"
+  },
+  {
+    "male genitalia infection": "4"
+  },
+  {
+    "hpv": "9"
+  },
+  {
+    "angina": "8"
+  },
+  {
+    "injury to the spinal cord": "1"
+  },
+  {
+    "nasal polyp": "7"
+  },
+  {
+    "lichen simplex": "6"
+  },
+  {
+    "trichiasis": "7"
+  },
+  {
+    "acariasis": "6"
+  },
+  {
+    "colorectal cancer": "3"
+  },
+  {
+    "skin pigmentation disorder": "6"
+  },
+  {
+    "factitious disorder": "1"
+  },
+  {
+    "lymphogranuloma venereum": "9"
+  },
+  {
+    "galactorrhea of unknown cause": "9"
+  },
+  {
+    "g6pd enzyme deficiency": "6"
+  },
+  {
+    "nerve impingement near the shoulder": "1"
+  },
+  {
+    "toxoplasmosis": "1"
+  },
+  {
+    "fibroadenoma": "9"
+  },
+  {
+    "open wound of the hand": "5"
+  },
+  {
+    "missed abortion": "1"
+  },
+  {
+    "diabetic ketoacidosis": "9"
+  },
+  {
+    "granuloma inguinale": "6"
+  },
+  {
+    "obsessive compulsive disorder (ocd)": "1"
+  },
+  {
+    "injury of the ankle": "5"
+  },
+  {
+    "hyponatremia": "1"
+  },
+  {
+    "stricture of the esophagus": "3"
+  },
+  {
+    "fracture of the ankle": "5"
+  },
+  {
+    "soft tissue sarcoma": "5"
+  },
+  {
+    "bone disorder": "5"
+  },
+  {
+    "epilepsy": "1"
+  },
+  {
+    "personality disorder": "1"
+  },
+  {
+    "shingles (herpes zoster)": "1"
+  },
+  {
+    "tourette syndrome": "1"
+  },
+  {
+    "avascular necrosis": "5"
+  },
+  {
+    "strep throat": "7"
+  },
+  {
+    "spinocerebellar ataxia": "1"
+  },
+  {
+    "osteomyelitis": "5"
+  },
+  {
+    "sjogren syndrome": "1"
+  },
+  {
+    "adhesive capsulitis of the shoulder": "5"
+  },
+  {
+    "viral hepatitis": "3"
+  },
+  {
+    "tonsillar hypertrophy": "7"
+  },
+  {
+    "gastritis": "3"
+  },
+  {
+    "skin cancer": "6"
+  },
+  {
+    "rheumatic fever": "1"
+  },
+  {
+    "aphthous ulcer": "3"
+  },
+  {
+    "tonsillitis": "7"
+  },
+  {
+    "intestinal cancer": "3"
+  },
+  {
+    "rocky mountain spotted fever": "8"
+  },
+  {
+    "stomach cancer": "3"
+  },
+  {
+    "developmental disability": "1"
+  },
+  {
+    "acute stress reaction": "1"
+  },
+  {
+    "delirium": "1"
+  },
+  {
+    "callus": "5"
+  },
+  {
+    "guillain barre syndrome": "1"
+  },
+  {
+    "lumbago": "5"
+  },
+  {
+    "deviated nasal septum": "7"
+  },
+  {
+    "hemangioma": "9"
+  },
+  {
+    "peripheral arterial disease": "8"
+  },
+  {
+    "chronic back pain": "5"
+  },
+  {
+    "heart failure": "8"
+  },
+  {
+    "conjunctivitis": "7"
+  },
+  {
+    "herniated disk": "5"
+  },
+  {
+    "rhabdomyolysis": "1"
+  },
+  {
+    "breast infection (mastitis)": "9"
+  },
+  {
+    "abdominal aortic aneurysm": "8"
+  },
+  {
+    "pulmonary embolism": "2"
+  },
+  {
+    "conduct disorder": "1"
+  },
+  {
+    "mastectomy": "9"
+  },
+  {
+    "epididymitis": "4"
+  },
+  {
+    "premature rupture of amniotic membrane": "9"
+  },
+  {
+    "molluscum contagiosum": "6"
+  },
+  {
+    "necrotizing fasciitis": "1"
+  },
+  {
+    "benign vaginal discharge (leukorrhea)": "4"
+  },
+  {
+    "bladder obstruction": "3"
+  },
+  {
+    "melanoma": "6"
+  },
+  {
+    "cervical disorder": "5"
+  },
+  {
+    "laryngitis": "7"
+  },
+  {
+    "dyshidrosis": "6"
+  },
+  {
+    "poisoning due to opioids": "1"
+  },
+  {
+    "diaper rash": "6"
+  },
+  {
+    "lichen planus": "6"
+  },
+  {
+    "gastroduodenal ulcer": "3"
+  },
+  {
+    "inguinal hernia": "5"
+  },
+  {
+    "eczema": "6"
+  },
+  {
+    "asperger syndrome": "1"
+  },
+  {
+    "mucositis": "3"
+  },
+  {
+    "paronychia": "6"
+  },
+  {
+    "open wound of the jaw": "7"
+  },
+  {
+    "white blood cell disease": "1"
+  },
+  {
+    "kaposi sarcoma": "9"
+  },
+  {
+    "spondylolisthesis": "5"
+  },
+  {
+    "pseudotumor cerebri": "1"
+  },
+  {
+    "conjunctivitis due to virus": "7"
+  },
+  {
+    "open wound of the nose": "7"
+  }
+]
